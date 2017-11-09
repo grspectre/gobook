@@ -9,23 +9,23 @@ import (
 	"math/rand"
 	"os"
 	"time"
-	"fmt"
+//	"fmt"
 )
 
 var pallete = []color.Color{color.White, color.Black}
 
 const (
 	whiteIndex = 0
-	blackIndex = 0
+	blackIndex = 1
 )
 
 func main() {
-	fd, err := os.OpenFile("s.gif", os.O_CREATE, 0666)
-	if nil != err {
-		fmt.Println(err)
-		return
-	}
-	lissajous(fd)
+//	fd, err := os.OpenFile("s.gif", os.O_CREATE, 0666)
+//	if nil != err {
+//		fmt.Println(err)
+//		return
+//	}
+	lissajous(os.Stdout)
 }
 
 func lissajous(out io.Writer) {
